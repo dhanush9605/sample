@@ -26,6 +26,7 @@ body {
 
 .calculator-container {
   display: flex;
+<<<<<<< Updated upstream
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -36,12 +37,60 @@ body {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+=======
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.app-title {
+  font-size: 56px;
+  font-weight: 900;
+  margin-bottom: 40px;
+  letter-spacing: -3px;
+  background: linear-gradient(to bottom, #fff 0%, #64748b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
+}
+
+.main-content {
+  display: flex;
+  gap: 32px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Calculator Section */
+.calculator-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 420px;
+}
+
+.calculator-frame {
+  background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+>>>>>>> Stashed changes
   border: 1px solid var(--glass-border);
   border-radius: 24px;
   padding: 24px;
   width: 100%;
+<<<<<<< Updated upstream
   max-width: 360px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+=======
+  box-shadow: var(--glass-shadow);
+>>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -130,7 +179,101 @@ body {
 }
 
 .btn-zero {
+<<<<<<< Updated upstream
   grid-column: span 1;
+=======
+  grid-column: span 2;
+}
+
+/* Notes & History Sidebar */
+.notes-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+  min-width: 320px;
+  max-width: 420px;
+}
+
+.notes-card, .history-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: 32px;
+  padding: 32px;
+  box-shadow: var(--glass-shadow);
+  width: 100%;
+}
+
+.notes-header, .history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.notes-title, .history-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.clear-history-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-history-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.notes-textarea, .history-list {
+  background: rgba(2, 6, 23, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 16px;
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.history-item {
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid var(--accent-primary);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-family: 'JetBrains Mono', monospace;
+>>>>>>> Stashed changes
+}
+
+.notes-footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 11px;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.history-empty {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 14px;
 }
 
 /* Animations */
