@@ -110,6 +110,7 @@ body {
 
 .btn-equals {
   grid-column: span 1;
+  grid-column: span 2;
   background: var(--accent-color);
   color: #000;
   font-weight: 700;
@@ -132,6 +133,7 @@ body {
 
 .btn-zero {
   grid-column: span 2;
+  grid-column: span 1;
 }
 
 /* Animations */
