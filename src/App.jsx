@@ -1,16 +1,28 @@
 import React from 'react';
 import Calculator from './components/Calculator';
+import NotesCard from './components/NotesCard';
 import './styles/calculator.css';
 
 /**
  * Main App component.
- * Renders the Calculator within the root of the application.
+ * Renders the Calculator and a side Notes card.
  */
 function App() {
   return (
     <div className="App">
-      <h1 className="app-title">calculator</h1>
-      <Calculator />
+      <div className="app-container">
+        <h1 className="app-title">calculator</h1>
+        
+        <div className="main-content">
+          <div className="calculator-section">
+            <Calculator />
+          </div>
+          
+          <aside className="notes-sidebar">
+            <NotesCard />
+          </aside>
+        </div>
+      </div>
     </div>
   );
 }
