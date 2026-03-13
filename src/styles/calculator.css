@@ -150,6 +150,12 @@ body {
   color: #fff;
   font-weight: 600;
   font-size: 26px;
+.btn-equals {
+  grid-column: span 1;
+  grid-column: span 2;
+  background: var(--accent-color);
+  color: #000;
+  font-weight: 700;
 }
 
 .btn-equals {
@@ -162,11 +168,19 @@ body {
   background: var(--btn-clear);
   color: #fff;
   font-weight: 600;
+  grid-column: span 3;
+  color: var(--clear-color);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.btn-clear:hover {
+  background: rgba(239, 68, 68, 0.2);
 }
 
 .btn-zero {
   grid-column: span 2;
   border-radius: 12px;
+  grid-column: span 1;
 }
 
 /* Animations */
