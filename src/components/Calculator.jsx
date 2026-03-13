@@ -7,7 +7,7 @@ import { add, subtract, multiply, divide } from '../utils/operations';
  * Calculator component.
  * Manages the state and logic for the calculator application.
  */
-const Calculator = () => {
+const Calculator = ({ onCalculate }) => {
   const [displayValue, setDisplayValue] = useState('0');
   const [prevValue, setPrevValue] = useState(null);
   const [operator, setOperator] = useState(null);
@@ -46,6 +46,12 @@ const Calculator = () => {
 
       if (operator && prevValue !== null) {
         const result = performCalculation(prevValue, inputValue, operator);
+        
+        // Notify parent of calculation
+        if (onCalculate) {
+          onCalculate(`${prevValue} ${operator} ${inputValue} = ${result}`);
+        }
+
         setDisplayValue(String(result));
         setPrevValue(null);
         setOperator(null);
