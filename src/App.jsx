@@ -9,6 +9,7 @@ import './styles/calculator.css';
 function App() {
   return (
     <div className="App">
+      <h1 className="app-title">calculator</h1>
       <Calculator />
     </div>
   );

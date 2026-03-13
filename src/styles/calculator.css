@@ -37,10 +37,27 @@ body {
 /* Calculator Container */
 .calculator-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+/* App Title */
+.app-title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: lowercase;
+  letter-spacing: -2px;
+  background: linear-gradient(to bottom, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+  animation: slideDownFade 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .calculator-frame {
@@ -150,11 +167,6 @@ body {
   color: #fff;
   font-weight: 600;
   font-size: 26px;
-.btn-equals {
-  grid-column: span 1;
-  background: var(--accent-color);
-  color: #000;
-  font-weight: 700;
 }
 
 .btn-equals {
@@ -168,21 +180,30 @@ body {
   color: #fff;
   font-weight: 600;
   grid-column: span 3;
-  color: var(--clear-color);
-  background: rgba(239, 68, 68, 0.1);
 }
 
 .btn-clear:hover {
-  background: rgba(239, 68, 68, 0.2);
+  background: var(--btn-clear);
+  filter: brightness(1.1);
 }
 
 .btn-zero {
   grid-column: span 2;
   border-radius: 12px;
-  grid-column: span 1;
 }
 
 /* Animations */
+@keyframes slideDownFade {
+  from { 
+    opacity: 0; 
+    transform: translateY(-20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
 @keyframes slideUpFade {
   from { 
     opacity: 0; 
